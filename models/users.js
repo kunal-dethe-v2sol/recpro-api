@@ -9,12 +9,20 @@ module.exports = function(sequelize, DataTypes) {
       autoIncrement: true
     },
     firstname: {
-      type: DataTypes.STRING(15),
+      type: DataTypes.STRING(50),
       allowNull: false
     },
     lastname: {
-      type: DataTypes.STRING(15),
+      type: DataTypes.STRING(50),
       allowNull: false
+    },
+    email: {
+      type: DataTypes.STRING(100),
+      allowNull: false
+    },
+    password: {
+      type: DataTypes.STRING(60),
+      allowNull: true
     }
   }, {
     tableName: 'users'
